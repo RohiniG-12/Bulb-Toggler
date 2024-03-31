@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb_Toggler</title>
+</head>
+<style>
+    body{
+        background: rgb(36,32,0);
+         background: linear-gradient(90deg, rgba(36,32,0,1) 0%, rgba(9,121,114,1) 35%, rgba(0,255,222,1) 100%);
+         min-width: 100vh;
+    }
+    .heading{
+        text-align: center;
+        font-size: 50px;
+        color: white;
+    }
+    .container{
+        background-color: white;
+        width: 400px;
+        display: block;
+        margin: auto;
+        border-radius: 20px;
+        
+    }
+    .img-container{
+        width: 300px;
+        display: block;
+        margin:auto;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0px;
+  }
+    .btn{
+      width: 80px;
+      padding: 10px;
+      border-radius: 50px;
+      border: none;
+      margin-left: 30px;
+    }
+    .btn-container{
+        display: block;
+        margin: 30px auto;
+        width: 250px;
+        
+ }
+ .btn-on{
+    background-color: green;
+    color: white;
+
+ }
+ .btn-off{
+    background-color: red;
+    color: white;
+ }
+
+</style>
+<body>
+    <h1 class="heading">Bulb_Toggler</h1>
+    <div class="container">
+        <img src="bulboff.png" id="img" class="img-container"/>
+    </div>
+    <div class="btn-container">
+        <button class="btn btn-on" onclick="turnOn()">ON</button>
+        <button class="btn btn-off" onclick="turnOff()">OFF</button>
+
+    </div>
+  <script>
+    function turnOn()
+    {
+        const bulbElement=document.getElementById('img')
+        bulbElement.src="bulbon.png"
+    }
+    function turnOff()
+    {
+        const bulbElement=document.getElementById('img')
+        bulbElement.src="bulboff.png"
+    }
+  </script>  
+</body>
+</html>
